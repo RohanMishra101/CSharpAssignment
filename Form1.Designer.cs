@@ -43,25 +43,37 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.getId1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Name,
+            this.Address,
+            this.Salary});
             this.dataGridView1.Location = new System.Drawing.Point(25, 218);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(622, 217);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 55);
+            this.label1.Location = new System.Drawing.Point(26, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 1;
@@ -70,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 88);
+            this.label2.Location = new System.Drawing.Point(26, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 2;
@@ -79,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 122);
+            this.label3.Location = new System.Drawing.Point(26, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 3;
@@ -87,7 +99,7 @@
             // 
             // getName
             // 
-            this.getName.Location = new System.Drawing.Point(97, 52);
+            this.getName.Location = new System.Drawing.Point(94, 72);
             this.getName.Name = "getName";
             this.getName.Size = new System.Drawing.Size(276, 23);
             this.getName.TabIndex = 4;
@@ -95,21 +107,21 @@
             // 
             // getAddress
             // 
-            this.getAddress.Location = new System.Drawing.Point(97, 85);
+            this.getAddress.Location = new System.Drawing.Point(94, 105);
             this.getAddress.Name = "getAddress";
             this.getAddress.Size = new System.Drawing.Size(276, 23);
             this.getAddress.TabIndex = 5;
             // 
             // getSalary
             // 
-            this.getSalary.Location = new System.Drawing.Point(97, 119);
+            this.getSalary.Location = new System.Drawing.Point(94, 139);
             this.getSalary.Name = "getSalary";
             this.getSalary.Size = new System.Drawing.Size(276, 23);
             this.getSalary.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 145);
+            this.button1.Location = new System.Drawing.Point(25, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 47);
             this.button1.TabIndex = 7;
@@ -119,7 +131,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(194, 145);
+            this.button2.Location = new System.Drawing.Point(194, 166);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 47);
             this.button2.TabIndex = 8;
@@ -129,7 +141,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(363, 145);
+            this.button3.Location = new System.Drawing.Point(363, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 47);
             this.button3.TabIndex = 11;
@@ -139,7 +151,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(539, 145);
+            this.button4.Location = new System.Drawing.Point(539, 166);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 47);
             this.button4.TabIndex = 12;
@@ -149,7 +161,7 @@
             // 
             // getId
             // 
-            this.getId.Location = new System.Drawing.Point(443, 52);
+            this.getId.Location = new System.Drawing.Point(426, 42);
             this.getId.Name = "getId";
             this.getId.Size = new System.Drawing.Size(276, 23);
             this.getId.TabIndex = 14;
@@ -158,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(420, 55);
+            this.label4.Location = new System.Drawing.Point(403, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 15);
             this.label4.TabIndex = 13;
@@ -186,11 +198,65 @@
             this.label6.Text = "Delete Data";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(480, 71);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(163, 47);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Show Data";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // getId1
+            // 
+            this.getId1.Location = new System.Drawing.Point(94, 42);
+            this.getId1.Name = "getId1";
+            this.getId1.Size = new System.Drawing.Size(276, 23);
+            this.getId1.TabIndex = 19;
+            this.getId1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 15);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Id";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.Width = 140;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.Width = 140;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.Width = 140;
+            // 
+            // Salary
+            // 
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
+            this.Salary.Width = 140;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1106, 629);
+            this.Controls.Add(this.getId1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.getId);
@@ -233,5 +299,12 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button button5;
+        private TextBox getId1;
+        private Label label7;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Address;
+        private DataGridViewTextBoxColumn Salary;
     }
 }
