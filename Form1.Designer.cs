@@ -46,27 +46,19 @@
             this.button5 = new System.Windows.Forms.Button();
             this.getId1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Name,
-            this.Address,
-            this.Salary});
             this.dataGridView1.Location = new System.Drawing.Point(25, 218);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(622, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(628, 217);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -225,35 +217,22 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Id";
             // 
-            // Id
+            // dataGridShow
             // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.Width = 140;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.Width = 140;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.Width = 140;
-            // 
-            // Salary
-            // 
-            this.Salary.HeaderText = "Salary";
-            this.Salary.Name = "Salary";
-            this.Salary.Width = 140;
+            this.dataGridShow.Location = new System.Drawing.Point(489, 123);
+            this.dataGridShow.Name = "dataGridShow";
+            this.dataGridShow.Size = new System.Drawing.Size(149, 26);
+            this.dataGridShow.TabIndex = 20;
+            this.dataGridShow.Text = "show";
+            this.dataGridShow.UseVisualStyleBackColor = true;
+            this.dataGridShow.Click += new System.EventHandler(this.dataGridShow_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1106, 629);
+            this.Controls.Add(this.dataGridShow);
             this.Controls.Add(this.getId1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button5);
@@ -302,9 +281,6 @@
         private Button button5;
         private TextBox getId1;
         private Label label7;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn Address;
-        private DataGridViewTextBoxColumn Salary;
+        private Button dataGridShow;
     }
 }

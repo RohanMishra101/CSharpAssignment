@@ -72,15 +72,15 @@ namespace CSharpAssignment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*dataGridView1.Rows.Add(getId.Text,getName.Text, getAddress.Text, getSalary.Text);*/
-            /* data.Open();
-             string query = "Select * from employeeData";
-             SqlCommand sqlCommand = new SqlCommand(query, data);
-             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-             DataTable dt = new DataTable();
-             adapter.Fill(dt);
-             dataGridView1.DataSource = dt;
-             data.Close();*/
+            /*dataGridView1.Rows.Add(getId.Text, getName.Text, getAddress.Text, getSalary.Text);
+            data.Open();
+            string query = "Select * from employeeData";
+            SqlCommand sqlCommand = new SqlCommand(query, data);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+            data.Close();*/
 
 
             //second method
@@ -89,14 +89,14 @@ namespace CSharpAssignment
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
-            for (int i = 0; i<dt.Rows.Count;i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string adt_id = dt.Rows[i]["id"].ToString();
                 string adt_name = dt.Rows[i]["employeeName"].ToString();
                 string adt_address = dt.Rows[i]["elpmoyeeAddress"].ToString();
                 string adt_salary = dt.Rows[i]["employeeSalary"].ToString();
-                dataGridView1.Rows.Add(adt_id,adt_name,adt_address,adt_salary);
-                
+                dataGridView1.Rows.Add(adt_id, adt_name, adt_address, adt_salary);
+
             }
         }
 
@@ -132,11 +132,11 @@ namespace CSharpAssignment
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                *//* string uName = getName.Text;
-                 string uAddress = getAddress.Text;
-                 string uSalary = getSalary.Text;*//*
+                string uName = getName.Text;
+                string uAddress = getAddress.Text;
+                string uSalary = getSalary.Text;
                 data.Open();
                 string query = "INSERT INTO Student (LastName, FirstName, Address, City)  VALUES(@ln, @fn, @add, @cit)";
                 SqlCommand cmd = new SqlCommand(query, data);
@@ -145,7 +145,7 @@ namespace CSharpAssignment
                 data.Close();
             }
             catch (Exception ex)
-            { MessageBox.Show("Error!! : " + ex.InnerException); }*/
+            { MessageBox.Show("Error!! : " + ex.InnerException); }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -155,8 +155,9 @@ namespace CSharpAssignment
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //Findng data through Database
             data.Open();
-            string query = "Select * from employeeData where id = '"+this.getId.Text+"'";
+            string query = "Select * from employeeData where id = '" + this.getId.Text + "'";
             SqlCommand sqlCommand = new SqlCommand(query, data);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
@@ -178,6 +179,20 @@ namespace CSharpAssignment
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridShow_Click(object sender, EventArgs e)
+        {
+            /*DataGridViewRow data = dataGridView1.CurrentRow;
+            string emp_id = data.Cells["id"].Value.ToString();
+            string emp_name = data.Cells["employeeName"].Value.ToString();
+            string emp_address = data.Cells["elpmoyeeAddress"].Value.ToString();
+            string emp_salary = data.Cells["employeeSalary"].Value.ToString();
+
+            getId1.Text = emp_id;
+            getName.Text = emp_name;
+            getAddress.Text = emp_address;
+            getSalary.Text = emp_salary;*/
         }
     }
 }
